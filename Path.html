@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    
+	
+    
+	<title>The Game</title>
+</head>
+<body id="path">
+
+<div class="typewriter" id="typedtext"></div>
+<div id="hidden">
+<button  class="braindamage"><a id="no" href="path.html">Path 1</a></button>
+<button  class="braindamage"><a id="no" href="path.html">Path 2</a></button>
+<button  class="braindamage"><a id="no" href="path.html">Path 3</a></button>
+</div>
+<script>       
+ var opacity = 0;
+        var intervalID = 0;
+        window.onload = fadeIn;
+          
+        function fadeIn() {
+            setInterval(show, 9000);
+        }
+          
+        function show() {
+            var body = document.getElementById("hidden");
+            opacity = Number(window.getComputedStyle(body)
+                            .getPropertyValue("opacity"));
+            if (opacity < 1) {
+                opacity = opacity + 1.5;
+                body.style.opacity = opacity
+            } else {
+                clearInterval(intervalID);
+            }
+			
+	}
+</script>
+
+<script src="script.js"></script>
+</body>
+
+</html>
